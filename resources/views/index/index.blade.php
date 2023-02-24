@@ -13,7 +13,7 @@
         {{ $animals_owner->email }}
         {{ $animals_owner->phone }}
         {{ $animals_owner->address }}
-        <a href="owner/detail/{{$animals_owner->id}}">Edit owner</a>
+        <a href="owner/detail/{{$animals_owner->owner_id}}">Edit owner</a>
     </div>
     <hr>
 @endforeach
