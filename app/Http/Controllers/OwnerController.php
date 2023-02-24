@@ -11,6 +11,4 @@ class OwnerController extends Controller
         return view ('owner/detail', compact('owner'));
             }
 
-
-
 }

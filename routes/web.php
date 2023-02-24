@@ -1,11 +1,8 @@
 <?php
 
 use App\Http\Controllers\AnimalController;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\HomeController;
 use App\Models\Animal;
->>>>>>> main
 use App\Http\Controllers\OwnerController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,11 +21,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-<<<<<<< HEAD
 Route::get('/animals', [AnimalController::class, 'index'])->name('animals.animal');
 
 Route::get('/owner/detail/{id}',[OwnerController::class, 'detail'])->name('owner.detail');
-=======
 // Route::get('/animals', [AnimalController::class, 'index'])->name('animals.animal');
 
 Route::get('/owner',[OwnerController::class, 'index'])->name('owner.index');
@@ -37,6 +32,3 @@ Route::get('/owner',[OwnerController::class, 'index'])->name('owner.index');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/animals', [AnimalController::class, 'list'])->name('animals.animal');
 Route::get('/animals/{animal_id}', [AnimalController::class, 'index'])->name('animals.index');
-
-Route::get('/owner',[OwnerController::class, 'index'])->name('owner.index');
->>>>>>> main
