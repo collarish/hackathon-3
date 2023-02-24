@@ -27,7 +27,8 @@ Route::get('/owner/detail/{id}',[OwnerController::class, 'detail'])->name('owner
 // Route::get('/animals', [AnimalController::class, 'index'])->name('animals.animal');
 
 Route::get('/owner',[OwnerController::class, 'index'])->name('owner.index');
-
+Route::get('/owner/create',[OwnerController::class, 'create'])->name('owner.create');
+Route::post('/owner/insert',[OwnerController::class, 'insert'])->name('owner.insert');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/animals', [AnimalController::class, 'list'])->name('animals.animal');
@@ -38,6 +39,7 @@ Route::get('/animals/{animal_id}/edit', [AnimalController::class, 'edit'])->name
 Route::put('/animals/{animal_id}/update', [AnimalController::class, 'update'])->name('animals.update');
 Route::get('/animals/{animal_id}', [AnimalController::class, 'index'])->name('animals.index');
 
+// Route::get('/animals/{animal_id}/edit', [AnimalController::class, 'index'])->name('animals.index');
 
 
 

@@ -37,7 +37,7 @@ class AnimalController extends Controller
     {
         $animal = Animal::findOrFail($animal_id);
 
-        var_dump($animal);
+ 
 
         return view('animals.form', compact('animal'));
     }
@@ -87,4 +87,6 @@ class AnimalController extends Controller
 
         return view('animals.index', compact('animals'));
     }
+
+
 }

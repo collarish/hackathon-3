@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +16,13 @@
 <div class="phone">
        Phone number: {{ $owner->phone }}
 </div>
-<div class="Email">
+<div class="email">
        Email: {{ $owner->email }}
+</div>
+Registered animals: 
+@foreach($owner_animal as $animal) 
+<li>{{ $animal->name }}</li>
+@endforeach
 </div>
 </body>
 </html>
