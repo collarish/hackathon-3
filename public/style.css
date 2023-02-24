@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 img {
@@ -18,5 +19,13 @@ img {
 
 .dog-name {
     font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4fb9af;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 

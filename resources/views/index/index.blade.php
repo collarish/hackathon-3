@@ -1,7 +1,6 @@
 @include('common.html-start')
-<div class="new-owner">
-<a href="owner/create">Create new owner entry</a>
-</div>
+@include('common.nav')
+
 
 @foreach ($animals_owners as $animals_owner)
     <div class="animal-container">
