@@ -1,3 +1,6 @@
+<div class="new-owner">
+<a href="owner/create">Create new owner entry</a>
+</div>
 @foreach ($animals_owners as $animals_owner)
     <div class="dog-info">
         <img src="/images/pets/{{ $animals_owner->path}}">
@@ -15,9 +18,8 @@
         {{ $animals_owner->address }}
         <a href="owner/detail/{{$animals_owner->owner_id}}">Edit owner</a>
     </div>
-    <hr>
+    <br>
 @endforeach
-
 {{-- Animals:
 @foreach ($animals as $animal)
     <li>{{ $animal->name }} </li> 

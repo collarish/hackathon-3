@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Animal;
+use App\Models\Owner;
 use Illuminate\Http\Request;
 
 class AnimalController extends Controller
 {
+
     public function index($animal_id)
     {
         $animal = Animal::findOrFail($animal_id);
@@ -29,4 +31,6 @@ class AnimalController extends Controller
 
         return view('animals.index', compact('animals'));
     }
+
+
 }

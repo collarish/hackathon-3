@@ -9,7 +9,7 @@ use DB;
 
 class HomeController extends Controller
 {
-    public function index() 
+    public function index()
     {
         $owners = Owner::orderBy('first_name')->limit(20)->get();
 
