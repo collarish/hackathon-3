@@ -1,4 +1,4 @@
 <nav>
-    <div>Hector's Clinic</div>
+    <a href="/">Hector's Clinic</a>
     <a href="owner/create">Add new owner</a>
 </nav>

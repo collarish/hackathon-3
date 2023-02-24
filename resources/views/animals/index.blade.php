@@ -1,4 +1,5 @@
 @include('common.html-start')
+@include('common.nav')
 
  <h1>Detail of Dog <?=$animal->name?></h1>
   <ul>
