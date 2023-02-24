@@ -8,6 +8,55 @@ use Illuminate\Http\Request;
 
 class AnimalController extends Controller
 {
+
+    // create a form 
+    public function create()
+    {
+        $animal = new Animal;
+
+        return view('animals.form', compact('animal'));
+    }
+
+    public function insert(Request $request)
+    {
+        $animal = new Animal();
+        $animal->name = $request->post('name');
+        $animal->breed = $request->post('breed');
+        $animal->age = $request->post('age');
+        $animal->weight = $request->post('weight');
+        $animal->save();
+
+        session()->flash('success_message', 'Animal information were updated!');
+        return redirect()->route('animals.create');
+
+
+    }
+
+
+    public function edit($animal_id)
+    {
+        $animal = Animal::findOrFail($animal_id);
+
+        var_dump($animal);
+
+        return view('animals.form', compact('animal'));
+    }
+
+
+    public function update($animal_id, Request $request)
+    {
+        $animal = Animal::findOrFail($animal_id);
+        $animal->name = $request->post('name');
+        $animal->breed = $request->post('breed');
+        $animal->age = $request->post('age');
+        $animal->weight = $request->post('weight');
+        $animal->save();
+
+        session()->flash('success_message', 'Animal information were updated!');
+        return redirect()->route('animals.index', $animal_id);
+    }
+
+
     public function index($animal_id)
     {
         $animal = Animal::findOrFail($animal_id);

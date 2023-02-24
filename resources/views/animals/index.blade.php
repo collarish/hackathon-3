@@ -32,7 +32,7 @@
 
     <a href="owner/detail/{{ $animal_owner->owner_id}}">{{ $animal_owner->first_name }} {{ $animal_owner->surname }}</a>
 
-    <a href="">Edit</a>
+    <a href="{{$animal->id}}/edit">Edit</a>
    
     
 </body>
