@@ -15,7 +15,7 @@
   <ul>
 
         <li>
-           Species: <?=$animal->species?>
+           Name: <?=$animal->name?>
         </li>
         <li>
            Breed:  <?=$animal->breed?>
@@ -28,6 +28,11 @@
         </li>
     </ul>
 
+    <img src="/images/pets/{{ $animal_owner->path }}">
+
+    <a href="owner/detail/{{ $animal_owner->owner_id}}">{{ $animal_owner->first_name }} {{ $animal_owner->surname }}</a>
+
+    <a href="">Edit</a>
    
     
 </body>
