@@ -17,8 +17,7 @@ class HomeController extends Controller
 
         $animals_owners = Owner::leftJoin('animals','animals.owner_id', '=', 'owners.id')
         ->leftJoin('images','animals.image_id', '=', 'images.id')
-        ->select('animals.*', 'owners.first_name', 'owners.surname', 'owners.email', 'owners.phone', 'owners.address', 'images.path')
-        ->limit(10)
+        ->select('animals.*', 'owners.id as owner_id', 'owners.first_name', 'owners.surname', 'owners.email', 'owners.phone', 'owners.address', 'images.path')
         ->get();
 
 
