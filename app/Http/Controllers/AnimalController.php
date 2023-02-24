@@ -2,18 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Animal;
 use Illuminate\Http\Request;
 
 class AnimalController extends Controller
 {
-    public function index()
+    public function index($animal_id)
     {
-        $animal = DB::select 
+        $animal = Animal::findOrFail($animal_id);
+    
+
+
+        return view('animals.index', compact('animal'));
     }
 
 
     public function list()
     {
-        $animals = DB::select()
+
+        
+
+        $builder = Animal::orderBy('name')
+            ->where('id', 1) 
+            ->limit(20);
+        $animals = $builder->get();
+
+        return view('animals.index', compact('animals'));
     }
 }
