@@ -1,6 +1,6 @@
 @foreach ($animals_owners as $animals_owner)
     <div class="dog-info">
-        <img src="images/pets/{{ $animals_owner->path}}">
+        <img src="/images/pets/{{ $animals_owner->path}}">
         {{ $animals_owner->name }}
         {{ $animals_owner->breed }}
         {{ $animals_owner->age }} years
@@ -13,7 +13,7 @@
         {{ $animals_owner->email }}
         {{ $animals_owner->phone }}
         {{ $animals_owner->address }}
-
+        <a href="owner/detail/{{$animals_owner->owner_id}}">Edit owner</a>
     </div>
     <hr>
 @endforeach
