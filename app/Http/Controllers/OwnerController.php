@@ -10,7 +10,7 @@ class OwnerController extends Controller
     public function detail($id) {
         $owner = Owner::findOrFail($id);
         $owner_animal =  Owner::leftJoin('animals','animals.owner_id','=','owners.id')
-        ->select('animals.name')
+        ->select('animals.name', 'animals.id')
         ->where('owners.id',$id)
         ->get()
         ;

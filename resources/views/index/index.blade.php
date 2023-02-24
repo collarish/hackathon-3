@@ -11,14 +11,14 @@
             <div>{{ $animals_owner->breed }}</div>
             <div>{{ $animals_owner->age }} years</div>
             <div>{{ $animals_owner->weight }} kg</div>
-            <a href="animals/{{$animals_owner->id}}">Edit dog</a>
+            <a href="animals/{{$animals_owner->id}}">View dog</a>
         </div>
         <div class="owner-info"> 
             <div>Owner: {{ $animals_owner->first_name . " " . $animals_owner->surname }} </div>
             <div>{{ $animals_owner->email }}</div>
             <div>{{ $animals_owner->phone }}</div>
             <div>{{ $animals_owner->address }}</div>
-            <a href="owner/detail/{{$animals_owner->owner_id}}">Edit owner</a>
+            <a href="owner/detail/{{$animals_owner->owner_id}}">View owner</a>
         </div>
     </div>
     <br>

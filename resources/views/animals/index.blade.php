@@ -30,7 +30,7 @@
 
     <img src="/images/pets/{{ $animal_owner->path }}">
 
-    <a href="owner/detail/{{ $animal_owner->owner_id}}">{{ $animal_owner->first_name }} {{ $animal_owner->surname }}</a>
+    Owner: <a href="../owner/detail/{{ $animal_owner->owner_id}}">{{ $animal_owner->first_name }} {{ $animal_owner->surname }}</a>
 
     <a href="{{$animal->id}}/edit">Edit</a>
    

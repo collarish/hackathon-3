@@ -21,7 +21,7 @@
 </div>
 Registered animals: 
 @foreach($owner_animal as $animal) 
-<li>{{ $animal->name }}</li>
+<a href="/animals/{{$animal->id}}">{{ $animal->name }}</a>
 @endforeach
 </div>
 </body>
