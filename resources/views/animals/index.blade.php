@@ -10,16 +10,16 @@
            Breed:  <?=$animal->breed?>
         </li>
         <li>
-           Age:  <?=$animal->age?>
+           Age:  <?=$animal->age?> years
         </li>
          <li>
-            Weight:<?=$animal->weight?>
+            Weight: <?=$animal->weight?> kg
         </li>
     </ul>
 
-    <img src="/images/pets/{{ $animal_owner->path }}">
+    <img class="dog-img" src="/images/pets/{{ $animal_owner->path }}"> <br>
 
-    Owner: <a href="../owner/detail/{{ $animal_owner->owner_id}}">{{ $animal_owner->first_name }} {{ $animal_owner->surname }}</a>
+    Owner: <a href="../owner/detail/{{ $animal_owner->owner_id}}">{{ $animal_owner->first_name }} {{ $animal_owner->surname }}</a> <br>
 
     <a href="{{$animal->id}}/edit">Edit</a>
    
